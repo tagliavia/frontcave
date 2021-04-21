@@ -1,65 +1,59 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Header from  "../src/components/header"
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>The Front Cave</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
       </Head>
+    <Header/>
+      <div className="container-fluid">
+        <main className="container">
+          <h1 className="overline mb-4 pb-4 border-bottom">
+            WELCOME To Frontcave Sessions!
+          </h1>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className="d-flex flex-row sesion">
+            <div className="sesion-wrapper-imagen col-8 offset-1">
+              <img src="/assets/sesion-dirty little secrets del HTML para emails.jpg" />
+            </div>
+            <div className="sesion-wrapper-contenido d-flex flex-column">
+              <h3 className="mb-4">
+                Los dirty little secrets del HTML en emails
+              </h3>
+              <p className="h5">
+                By: <span className="text-secondary">Daniel Vicente</span>
+              </p>
+              <a
+                rel="nofollow"
+                target="_blank"
+                href="https://docs.google.com/presentation/d/1LyqsN64RMUDZebCJIRZrYTjxYBXb3EEsV5lCQ0GsS8c/edit#slide=id.p"
+              >
+                Presentacion<span class="material-icons">north_east</span>
+              </a>
+              <a
+                rel="nofollow"
+                target="_blank"
+                href="https://drive.google.com/file/d/11yEUVaeatD4LS1CbHQC9GawOW2dDCFEJ/view?usp=sharing"
+              >
+                Grabacion<span className="material-icons">north_east</span>
+              </a>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer className="container-fluid py-4 mt-5">
+        <div className="container text-center text-white-50">
+          Powereded by: Frontend Collective | Resistance is FUTILE!!!
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
       </footer>
-    </div>
-  )
+    </>
+  );
 }
